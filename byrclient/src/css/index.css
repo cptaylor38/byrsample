@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  height: 10rem;
+  background: beige;
+}
+
+#logo {
+  height: 20vh;
+  width: 30vw;
+  object-fit: contain;
+  padding: 10px;
+}
+
+#navLinks {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+#navLinks > a {
+  text-decoration: none;
+}
