@@ -1,9 +1,8 @@
 import React from "react"
 import Map from "../components/map"
-require("dotenv")
 
 const Footer = () => {
-  const url = `https://maps.googleapis.com/maps/api/js?key=${process.env.GatsbygmKey}&v=3.exp&libraries=geometry,drawing,places`
+  const url = `https://maps.googleapis.com/maps/api/js?key=${process.env.GATSBY_gmKey}&v=3.exp&libraries=geometry,drawing,places`
   return (
     <footer>
       <div id="links">
