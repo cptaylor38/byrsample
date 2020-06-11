@@ -1,19 +1,22 @@
 import React from "react"
 import Map from "../components/map"
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 const Footer = () => {
-  const url = `https://maps.googleapis.com/maps/api/js?key=${process.env.GATSBY_gmKey}&v=3.exp&libraries=geometry,drawing,places`
   return (
     <footer>
       <div id="links">
         <div>link 1</div>
         <div>link 2</div>
         <div>link 3</div>
+        <p> api key: {process.env.gmKey}</p>
       </div>
       <div id="mapContainer">
         <Map
           isMarkerShown
-          googleMapURL={url}
+          googleMapURL={process.env.GATSBY_gmURL}
           loadingElement={
             <div
               style={{
