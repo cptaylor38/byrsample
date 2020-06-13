@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #pageContainer {
@@ -17,21 +18,20 @@ body {
 }
 
 header {
-  width: 100vw;
   display: flex;
   justify-content: space-between;
-  height: 10rem;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   z-index: 2;
+  background: rgb(158, 196, 202);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.651);
+  box-shadow: 0 10px 9px rgba(0, 0, 0, 0.35);
 }
 
 #logo {
-  height: 20vh;
-  width: 30vw;
+  height: 15vh;
   object-fit: contain;
-  padding: 10px;
 }
 
 #navLinks {
@@ -40,7 +40,7 @@ header {
   justify-content: space-around;
   align-items: flex-end;
   font-size: 1.2rem;
-  margin-bottom: 2.4rem;
+  margin: 1.5rem 0;
 }
 
 #navLinks > a {
@@ -50,28 +50,64 @@ header {
 }
 
 #navLinks > a:hover {
-  color: rgba(100, 146, 31, 0.808);
-  font-size: 1.4rem;
-}
-
-.leafSVG {
-  height: 2rem;
-  width: 2rem;
+  color: rgb(19, 199, 175);
 }
 
 main {
   display: flex;
-  min-width: 100vw;
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-evenly;
+  background: url("https://images.unsplash.com/photo-1444392061186-9fc38f84f726?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main > section {
+  background: gainsboro;
+  padding: 3rem;
+  box-shadow: 0 10px 9px rgba(0, 0, 0, 0.35);
+  margin: 3rem 0;
+}
+
+#welcome {
+  width: 75%;
+  margin: auto;
+  border-radius: 25% 0 25% 0;
+  margin-top: 10vh;
+  padding: 2rem;
+}
+
+#testimonials {
+  margin: 3rem auto;
+  background: none;
+  box-shadow: none;
+}
+
+#quoteHolder {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.quote {
+  width: 35%;
+  padding: 2rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  white-space: pre-wrap;
+  color: rgb(63, 63, 63);
+  background: rgba(160, 184, 189, 0.911);
+  margin: 1rem;
+  box-shadow: 0 10px 9px rgba(0, 0, 0, 0.35);
 }
 
 footer {
-  min-width: 100vw;
   display: flex;
   background: rgba(100, 146, 31, 0.808);
-  padding: 2.5rem;
+  padding: 2.5rem 0px;
 }
 
 #links {
@@ -80,4 +116,20 @@ footer {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+}
+
+@media (max-width: 720px) {
+  header {
+    flex-direction: column;
+  }
+  #navLinks {
+    font-size: 1rem;
+    margin: 0.25em;
+  }
+}
+
+@media (max-width: 400px) {
+  #navLinks {
+    font-size: 0.75rem;
+  }
 }
