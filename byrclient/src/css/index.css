@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Coming+Soon&family=Delius+Swash+Caps&display=swap");
+
 html {
   height: 100%;
 }
@@ -23,7 +25,7 @@ header {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  z-index: 2;
+  z-index: 6;
   background: rgb(158, 196, 202);
   border-bottom: 1px solid rgba(0, 0, 0, 0.651);
   box-shadow: 0 10px 9px rgba(0, 0, 0, 0.35);
@@ -50,7 +52,7 @@ header {
 }
 
 #navLinks > a:hover {
-  color: rgb(19, 199, 175);
+  color: rgb(1, 175, 15);
 }
 
 main {
@@ -62,46 +64,158 @@ main {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  position: relative;
+}
+
+#page-overlay {
+  position: fixed;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(0, 0, 0);
 }
 
 main > section {
   background: gainsboro;
-  padding: 3rem;
+  padding: 3rem 0;
   box-shadow: 0 10px 9px rgba(0, 0, 0, 0.35);
   margin: 3rem 0;
+  z-index: 5;
+}
+
+#hero {
+  background: none;
+  box-shadow: none;
+  width: 60%;
+  margin: auto;
+  color: rgb(239, 250, 255);
+  font-size: 3rem;
+  min-height: 40vw;
+  font-family: "Delius Swash Caps", cursive;
+  text-align: center;
 }
 
 #welcome {
-  width: 75%;
   margin: auto;
-  border-radius: 25% 0 25% 0;
   margin-top: 10vh;
+  display: flex;
+  max-width: 100vw;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+#logo-container {
+  width: 80%;
+}
+
+#logo-container > img {
+  object-fit: contain;
+  max-width: 100%;
+}
+
+#store-info {
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+}
+
+#product-overview {
   padding: 2rem;
+  width: 80%;
+}
+
+#products-videos-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding-top: 3rem;
+}
+
+#products-videos-container > iframe {
+  margin-top: 1rem;
+}
+
+#facebook-link {
+  text-align: center;
+}
+
+#facebookMsg {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #3b5998;
+  text-decoration: underline;
+}
+
+#facebookMsg:hover {
+  color: #739bfa;
 }
 
 #testimonials {
-  margin: 3rem auto;
   background: none;
-  box-shadow: none;
-}
-
-#quoteHolder {
   display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  background: linear-gradient(
+    180deg,
+    rgba(224, 201, 124, 1) 0%,
+    rgba(208, 203, 174, 1) 100%
+  );
+  margin: 3rem auto;
+  min-width: 100%;
 }
 
-.quote {
-  width: 35%;
-  padding: 2rem;
-  border-radius: 10px;
-  font-size: 1.2rem;
+#testHeader {
+  -webkit-text-stroke: 2px black;
+  align-self: flex-start;
+  font-size: 2.4rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 3rem;
+}
+
+.quoteBtn {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 2rem;
+  color: lightgreen;
+  -webkit-text-stroke: 2px black;
+}
+
+.quoteBtn:hover {
+  color: rgb(9, 155, 9);
+}
+
+.quote-bubble {
+  position: relative;
+  font-family: sans-serif;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  line-height: 24px;
+  background: #fff;
+  border-radius: 40px;
+  padding: 24px;
+  text-align: center;
+  color: #000;
+  margin: 2rem;
   white-space: pre-wrap;
-  color: rgb(63, 63, 63);
-  background: rgba(160, 184, 189, 0.911);
-  margin: 1rem;
-  box-shadow: 0 10px 9px rgba(0, 0, 0, 0.35);
+}
+
+.quote-bubble:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 24px solid #fff;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #fff;
+  border-bottom: 20px solid transparent;
+  left: 32px;
+  bottom: -24px;
 }
 
 footer {
@@ -118,7 +232,13 @@ footer {
   align-items: center;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1200px) {
+  #hero {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 730px) {
   header {
     flex-direction: column;
   }
@@ -126,10 +246,16 @@ footer {
     font-size: 1rem;
     margin: 0.25em;
   }
+  #hero {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 400px) {
   #navLinks {
     font-size: 0.75rem;
+  }
+  #hero {
+    font-size: 1rem;
   }
 }

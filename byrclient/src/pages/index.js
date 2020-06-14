@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import "../css/index.css"
 import Layout from "../components/layout"
 
@@ -27,36 +27,97 @@ const HomePage = () => {
     ${"\n"}
     - Layne McCarn`,
   ]
+  const [quote, setQuote] = useState(testimonials[0])
+
+  const selectQuote = index => {
+    setQuote(testimonials[index])
+  }
 
   return (
     <Layout>
       <main>
-        <section id="welcome">
+        <div id="page-overlay"></div>
+        <section id="hero">
           <h1>
             Garden gifts and accessories, fountains, bird baths, bird feeders,
             bird houses, candles, home accessories, lighting, unique gifts and
             decor, and so much more!
           </h1>
         </section>
+        <section id="welcome">
+          <div id="logo-container">
+            <img
+              src={require("../images/byrlogo.jpg")}
+              alt="The Backyard Retreat"
+            ></img>
+          </div>
+          <div id="store-info">
+            <div>
+              <h4>Location:</h4>
+              <p>106 S. Main St, Lexington, NC 27292</p>
+            </div>
+            <div>
+              <h4>Telephone:</h4>
+              <p>336-242-1860</p>
+            </div>
+            <div>
+              <h4>Hours:</h4>
+              <p>Mon-Fri: 10:00am - 5:00pm</p>
+              <p>Saturdays: 10:00am - 4:00pm</p>
+            </div>
+          </div>
+          <div id="facebook-link">
+            <a
+              href="https://www.facebook.com/The-Backyard-Retreat-114269185326252"
+              target="_blank"
+              rel="noreferrer"
+              id="facebookMsg"
+            >
+              ~ Find us here on Facebook ~
+            </a>
+          </div>
+          <div id="product-overview">
+            <div id="products-videos-container">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/sMDzSuew4hY"
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                allowFullScreen
+                title="productVid"
+              ></iframe>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/OBxTQMPIP7c"
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                allowFullScreen
+                title="newStoreVid"
+              ></iframe>
+            </div>
+          </div>
+        </section>
         <section id="testimonials">
-          <div id="quoteHolder">
+          <div id="testHeader">Kind words from our customers:</div>
+          <div className="quote-bubble">
+            <p>{quote ? <i>"{quote}"</i> : null}</p>
+          </div>
+          <div className="quote-bubble_arrow"></div>
+          <div>
             {testimonials.map((quote, index) => (
-              <div className="quote" key={index}>
-                "{quote}"
-              </div>
+              <button
+                className="quoteBtn"
+                type="button"
+                key={index}
+                onClick={() => selectQuote(index)}
+              >
+                &clubs;
+              </button>
             ))}
           </div>
         </section>
-        <section id="storeInfo">
-          <a
-            href="https://www.facebook.com/The-Backyard-Retreat-114269185326252"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Check us out on Facebook.
-          </a>
-        </section>
-        <section id="gallery"></section>
       </main>
     </Layout>
   )
