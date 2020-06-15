@@ -16,6 +16,7 @@ const Layout = prop => {
           content="Home, Garden, Lexington, North Carolina, Backyard, Retreat"
         ></meta>
         <meta name="author" content="The Backyard Retreat"></meta>
+        <meta name="title" content="The Backyard Retreat"></meta>
         <meta name="robots" content="index, follow"></meta>
         <link rel="icon" href={require("../images/byrlogo.jpg")}></link>
       </Helmet>

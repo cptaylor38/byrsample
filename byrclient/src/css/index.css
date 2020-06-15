@@ -28,7 +28,6 @@ header {
   z-index: 6;
   background: rgb(158, 196, 202);
   border-bottom: 1px solid rgba(0, 0, 0, 0.651);
-  box-shadow: 0 10px 9px rgba(0, 0, 0, 0.35);
 }
 
 #logo {
@@ -70,6 +69,16 @@ main {
   position: relative;
 }
 
+main > section {
+  background: gainsboro;
+  padding: 3rem 0;
+  box-shadow: 0 10px 9px rgba(0, 0, 0, 0.35);
+  margin: 3rem 0;
+  z-index: 5;
+}
+
+/* Home Page */
+
 #page-overlay {
   position: fixed;
   opacity: 0.2;
@@ -78,14 +87,6 @@ main {
   height: 100vh;
   width: 100vw;
   background: rgb(0, 0, 0);
-}
-
-main > section {
-  background: gainsboro;
-  padding: 3rem 0;
-  box-shadow: 0 10px 9px rgba(0, 0, 0, 0.35);
-  margin: 3rem 0;
-  z-index: 5;
 }
 
 #hero {
@@ -271,12 +272,72 @@ main > section {
   bottom: -24px;
 }
 
+/* Home Page end */
+
+/* About page */
+
+#about-container {
+  margin: 0 auto;
+  padding: 0;
+}
+
+#about-mission {
+  background: yellow;
+}
+
+#about-story {
+  background: white;
+}
+
+#about-start {
+  background: tan;
+}
+
+.about-item {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 2rem;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.about-item > img {
+  flex: 1;
+  max-width: 40%;
+  object-fit: contain;
+}
+
+.about-text {
+  max-width: 30%;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-item > h1 {
+  font-family: "Delius Swash Caps", cursive;
+  width: 100%;
+}
+
+/* About page end */
+
+/* Tips page */
+
+/* Tips page end */
+
+/* Contact page */
+
+/* Contact page end */
+
+/* footer section */
 footer {
   display: flex;
   background: rgba(100, 146, 31, 0.808);
   padding: 2.5rem 0px;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 6;
 }
 
 #footer-info {
@@ -288,6 +349,11 @@ footer {
 #footer-info > li {
   list-style: none;
   margin: 10px;
+}
+
+#fbLink > img:hover {
+  height: 110px;
+  width: 110px;
 }
 
 #fbLink > img {
@@ -302,6 +368,8 @@ footer {
   justify-content: space-evenly;
   align-items: center;
 }
+
+/*Footer Section End */
 
 @media (max-width: 1200px) {
   #hero {
