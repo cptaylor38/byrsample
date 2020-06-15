@@ -18,7 +18,7 @@ body {
   position: relative;
   background: #dcdac2;
 }
-
+/* Nav section */
 header {
   display: flex;
   justify-content: space-between;
@@ -43,6 +43,7 @@ header {
   align-items: flex-end;
   font-size: 1.2rem;
   margin: 1.5rem 0;
+  font-family: "Delius Swash Caps", cursive;
 }
 
 #navLinks > a {
@@ -54,6 +55,8 @@ header {
 #navLinks > a:hover {
   color: rgb(1, 175, 15);
 }
+
+/* End of nav section */
 
 main {
   display: flex;
@@ -91,7 +94,7 @@ main > section {
   width: 60%;
   margin: auto;
   color: rgb(239, 250, 255);
-  font-size: 3rem;
+  font-size: 2.8rem;
   min-height: 40vw;
   font-family: "Delius Swash Caps", cursive;
   text-align: center;
@@ -112,7 +115,8 @@ main > section {
 
 #logo-container > img {
   object-fit: contain;
-  max-width: 100%;
+  width: 100%;
+  text-align: center;
 }
 
 #store-info {
@@ -152,6 +156,54 @@ main > section {
   color: #739bfa;
 }
 
+#gallery {
+  background: rgb(216, 189, 152);
+}
+
+#gallery > ::-webkit-scrollbar {
+  width: 8px;
+  height: 12px;
+}
+#gallery > ::-webkit-scrollbar-button {
+  width: 9px;
+  height: 9px;
+}
+#gallery > ::-webkit-scrollbar-thumb {
+  background: #9d9885;
+  border: 0px none #ffffff;
+  border-radius: 100px;
+}
+#gallery > ::-webkit-scrollbar-track {
+  background: rgb(216, 189, 152);
+  border: 0px none #ffffff;
+  border-radius: 100px;
+}
+#gallery > ::-webkit-scrollbar-track:hover {
+  background: #c6c3a9;
+}
+#gallery > ::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+#gallery > h1 {
+  text-align: center;
+  font-family: "Delius Swash Caps", cursive;
+}
+
+#gallery-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  margin: 0 2rem;
+}
+
+#gallery-container > img {
+  max-height: 50vh;
+  max-width: 50vw;
+  object-fit: contain;
+  margin: 2rem;
+}
+
 #testimonials {
   background: none;
   display: flex;
@@ -175,6 +227,7 @@ main > section {
   -webkit-background-clip: text;
   color: transparent;
   padding: 3rem;
+  font-family: "Delius Swash Caps", cursive;
 }
 
 .quoteBtn {
@@ -222,6 +275,24 @@ footer {
   display: flex;
   background: rgba(100, 146, 31, 0.808);
   padding: 2.5rem 0px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#footer-info {
+  max-height: 20vh;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#footer-info > li {
+  list-style: none;
+  margin: 10px;
+}
+
+#fbLink > img {
+  height: 100px;
+  width: 100px;
 }
 
 #links {

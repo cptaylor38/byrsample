@@ -27,6 +27,20 @@ const HomePage = () => {
     ${"\n"}
     - Layne McCarn`,
   ]
+
+  const gallery = [
+    "crowbath.jpg",
+    "fairylights.jpg",
+    "heads.jpg",
+    "lotion.jpg",
+    "owls.jpg",
+    "painting.jpg",
+    "pig.jpg",
+    "squirreltray.jpg",
+    "sunflower.jpg",
+    "towerplanter.jpg",
+  ]
+
   const [quote, setQuote] = useState(testimonials[0])
 
   const selectQuote = index => {
@@ -97,6 +111,18 @@ const HomePage = () => {
                 title="newStoreVid"
               ></iframe>
             </div>
+          </div>
+        </section>
+        <section id="gallery">
+          <h1>A small sample of what we sell:</h1>
+          <div id="gallery-container">
+            {gallery.map((image, index) => (
+              <img
+                src={require(`../images/${image}`)}
+                key={index}
+                alt={image}
+              ></img>
+            ))}
           </div>
         </section>
         <section id="testimonials">
