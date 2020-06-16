@@ -62,7 +62,7 @@ main {
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-evenly;
-  background: url("https://images.unsplash.com/photo-1444392061186-9fc38f84f726?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80");
+  background: url("../images/background.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -281,12 +281,36 @@ main > section {
   padding: 0;
   background: none;
   max-width: 100vw;
+  background: rgb(215, 231, 211);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(215, 231, 211, 1) 0%,
+    rgba(253, 251, 241, 1) 20%,
+    rgba(253, 251, 241, 1) 80%,
+    rgba(215, 231, 211, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(215, 231, 211, 1) 0%,
+    rgba(253, 251, 241, 1) 20%,
+    rgba(253, 251, 241, 1) 80%,
+    rgba(215, 231, 211, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(215, 231, 211, 1) 0%,
+    rgba(253, 251, 241, 1) 20%,
+    rgba(253, 251, 241, 1) 80%,
+    rgba(215, 231, 211, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d7e7d3",endColorstr="#d7e7d3",GradientType=1);
+  box-shadow: none;
 }
 
 .about-item {
   margin: 0;
   padding: 3rem;
-  background-color: rgba(255, 255, 255, 0.973);
+  color: rgb(63, 63, 63);
 }
 
 .about-content {
@@ -319,6 +343,61 @@ main > section {
 /* About page end */
 
 /* Tips page */
+
+.tips-section {
+  margin: 0;
+  padding: 3rem 0;
+  font-family: "Delius Swash Caps", cursive;
+  font-weight: none;
+  background: rgb(57, 92, 92);
+  background-image: url("../images/vine-borders.svg");
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: none;
+}
+
+.seasonal-tips {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.tips-header {
+  width: 100%;
+  text-align: center;
+  margin: 3rem auto;
+  font-size: 2rem;
+  color: rgb(189, 189, 179);
+}
+
+.tips-header > a {
+  color: lightgreen;
+}
+
+.tips-iframe-container {
+  background: rgb(59, 82, 59);
+  color: rgb(229, 229, 192);
+  padding: 0 0 1rem 0;
+  margin: 1rem auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 9px rgba(0, 0, 0, 0.35);
+}
+
+.tips-subheader {
+  text-align: center;
+}
+
+.msc-tips {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 2rem auto;
+}
 
 /* Tips page end */
 
