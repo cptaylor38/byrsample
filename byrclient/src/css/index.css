@@ -402,7 +402,14 @@ main > section {
 /* Tips page end */
 
 /* Contact page */
-
+#contact-section > form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+  justify-content: space-evenly;
+  min-height: 50vh;
+}
 /* Contact page end */
 
 /* footer section */
