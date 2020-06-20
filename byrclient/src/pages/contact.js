@@ -50,6 +50,8 @@ const ContactPage = () => {
               rows="5"
               placeholder="How can we help?"
             />
+            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" />
             <button>Send</button>
           </form>
         </section>
