@@ -28,7 +28,7 @@ const ContactPage = () => {
             id="contact-form"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            action="/"
+            action="/confirmation"
           >
             <label htmlFor="nameInput">Your name:</label>
             <input
