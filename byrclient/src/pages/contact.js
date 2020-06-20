@@ -50,7 +50,7 @@ const ContactPage = () => {
               rows="5"
               placeholder="How can we help?"
             />
-            <button type="submit">Send</button>
+            <button>Send</button>
           </form>
         </section>
       </main>
