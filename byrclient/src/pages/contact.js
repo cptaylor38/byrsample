@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../components/layout"
-const reloadCSS = require("../css/index.css")
 
 const ContactPage = () => {
   return (
@@ -29,7 +28,7 @@ const ContactPage = () => {
             id="contact-form"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            style={reloadCSS}
+            action="/confirmation"
           >
             <label htmlFor="nameInput">Your name:</label>
             <input

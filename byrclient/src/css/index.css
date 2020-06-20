@@ -484,6 +484,32 @@ main > section {
 
 /* Contact page end */
 
+/* Confirmation section */
+#confirmation-section {
+  margin: auto;
+  background: none;
+  box-shadow: none;
+  color: white;
+  font-size: 2rem;
+  margin-top: 4rem;
+  font-family: "Delius Swash Caps", cursive;
+  padding: 2rem;
+  font-weight: bolder;
+}
+
+#conFBLink {
+  color: white;
+  text-decoration: none;
+  background: rgb(38, 99, 179);
+  padding: 5px;
+  border-radius: 50%;
+}
+
+#conFBLink:hover {
+  background: white;
+  color: rgb(38, 99, 179);
+}
+
 /* footer section */
 footer {
   display: flex;
