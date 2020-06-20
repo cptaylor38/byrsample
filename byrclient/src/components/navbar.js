@@ -4,11 +4,17 @@ import { Link } from "gatsby"
 const Navbar = () => {
   const [isTop, setPosition] = useState(true)
   useEffect(() => {
-    document.addEventListener("scroll", () => {
-      const top = window.scrollY < 10
-      if (top !== isTop) setPosition(top)
-    })
+    let mounted = true
+    if (mounted) {
+      document.addEventListener("scroll", () => {
+        const top = window.scrollY < 10
+        if (top !== isTop) setPosition(top)
+      })
+    }
+
+    return () => (mounted = false)
   }, [isTop])
+
   return (
     <header>
       <img
