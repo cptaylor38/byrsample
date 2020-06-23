@@ -571,11 +571,25 @@ footer {
   #contact-section {
     width: 90%;
   }
+  .about-content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .about-content > img {
+    max-width: 100%;
+  }
+  .about-text {
+    max-width: 100%;
+  }
   #contact-header {
     font-size: 1.2rem;
   }
   #contact-form > label {
     font-size: 0.8rem;
+  }
+  .tips-iframe-container > iframe {
+    max-width: 90vw;
   }
 }
 
